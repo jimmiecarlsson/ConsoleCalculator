@@ -49,22 +49,37 @@ while (appRullar)
         case '3':
             Console.Clear();
             Console.WriteLine("Du valde Multiplikation.");
+            Console.WriteLine("Skriv in två tal som du vill multiplicera.\n");
+
+            Multiplicera multValue = new Multiplicera();
+            double produkt = multValue.getMultiplikation();
+            Console.WriteLine($"Produkten är {produkt}");
+
             Console.WriteLine("Tryck på valfri tangent för att fortsätta...");
             Console.ReadKey();
             break;
+
         case '4':
             Console.Clear();
             Console.WriteLine("Du valde Division.");
+            Console.WriteLine("Skriv in två tal som du vill dividera.\n");
+
+            Dividera divValue = new Dividera();
+            double kvot = divValue.getDivision();
+            Console.WriteLine($"Kvoten är {kvot}");
+
             Console.WriteLine("Tryck på valfri tangent för att fortsätta...");
             Console.ReadKey();
             break;
+
         case '5':
             Console.Clear();
             Console.WriteLine("\n\nAvslutar programmet.");
             appRullar = false;
             break;
+
         default:
-            Console.WriteLine("Ogiltigt val, försök igen.");
+            Console.WriteLine("\nOgiltigt val, försök igen.");
             Console.WriteLine("Tryck på valfri tangent för att fortsätta...");
             Console.ReadKey();
             break;
