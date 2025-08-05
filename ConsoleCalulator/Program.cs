@@ -25,16 +25,17 @@ while (appRullar)
             Console.WriteLine("Du valde Addition.");
             Console.WriteLine("Skriv in två tal som du vill addera.\n");
 
-            double summa = getAddition();
+            Addera addValue = new Addera();
+            double summa = addValue.getAddition();
             Console.WriteLine($"Summan är {summa}");
 
             Console.WriteLine("Tryck på valfri tangent för att fortsätta...");
             Console.ReadKey();
             break;
-
+            
         case '2':
             Console.Clear();
-            Console.WriteLine("\n\nDu valde Subtraktion.");
+            Console.WriteLine("Du valde Subtraktion.");
             Console.WriteLine("Skriv in två tal som du vill subtrahera.\n");
 
             Substrahera subValue = new Substrahera();
@@ -47,13 +48,13 @@ while (appRullar)
 
         case '3':
             Console.Clear();
-            Console.WriteLine("\nDu valde Multiplikation.");
+            Console.WriteLine("Du valde Multiplikation.");
             Console.WriteLine("Tryck på valfri tangent för att fortsätta...");
             Console.ReadKey();
             break;
         case '4':
             Console.Clear();
-            Console.WriteLine("\n\nDu valde Division.");
+            Console.WriteLine("Du valde Division.");
             Console.WriteLine("Tryck på valfri tangent för att fortsätta...");
             Console.ReadKey();
             break;
@@ -69,36 +70,5 @@ while (appRullar)
             break;
 
     }
-
-
-    // Metod för att hämta och addera två tal
-
-    double getAddition()
-    {
-        double tal1 = 0, tal2 = 0;
-
-        Console.WriteLine("Skriv in tal 1 + <RETURN>:");
-        // Mata in och validera det första numret
-        while (!double.TryParse(Console.ReadLine(), out tal1))
-            {
-                Console.WriteLine("Tänka på att använda komma-tecken för decimaler, försök igen:");
-            }
-
-        Console.WriteLine("Skriv in tal 2 + <RETURN>:");
-        // Mata in och validera det andra numret
-        while (!double.TryParse(Console.ReadLine(), out tal2))
-        {
-            Console.WriteLine("Tänka på att använda komma-tecken för decimaler, försök igen:");
-        }
-
-        // Summera, avrunda och returnera summan
-        double calcSumma = (tal1 + tal2);
-        calcSumma = Math.Round(calcSumma, 2);
-
-        return (calcSumma);
-    }
-
-    
-
 
 }
