@@ -9,7 +9,7 @@ namespace ConsoleCalulator
     public class Addera
     {
 
-        public double getAddition()
+        public double GetAddition()
         {
             double tal1 = 0, tal2 = 0;
 

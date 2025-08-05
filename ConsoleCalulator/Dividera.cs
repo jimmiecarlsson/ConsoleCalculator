@@ -9,7 +9,7 @@ namespace ConsoleCalulator
     public class Dividera
     {
 
-        public double getDivision()
+        public double GetDivision()
         {
             double tal1 = 0, tal2 = 0;
 

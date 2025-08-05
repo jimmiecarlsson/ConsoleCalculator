@@ -9,7 +9,7 @@ namespace ConsoleCalulator
 {
     public class Substrahera
     {
-        public double getSubstraktion()
+        public double GetSubstraktion()
         {
             double tal1 = 0, tal2 = 0;
 

@@ -9,7 +9,7 @@ namespace ConsoleCalulator
     public class Multiplicera
     {
 
-        public double getMultiplikation()
+        public double GetMultiplikation()
         {
             double tal1 = 0, tal2 = 0;
 

@@ -26,7 +26,7 @@ while (appRullar)
             Console.WriteLine("Skriv in två tal som du vill addera.\n");
 
             Addera addValue = new Addera();
-            double summa = addValue.getAddition();
+            double summa = addValue.GetAddition();
             Console.WriteLine($"Summan är {summa} \n");
 
             PausForKey();
@@ -38,7 +38,7 @@ while (appRullar)
             Console.WriteLine("Skriv in två tal som du vill subtrahera.\n");
 
             Substrahera subValue = new Substrahera();
-            double differens = subValue.getSubstraktion();
+            double differens = subValue.GetSubstraktion();
             Console.WriteLine($"Differensen är {differens} \n");
 
             PausForKey();
@@ -50,7 +50,7 @@ while (appRullar)
             Console.WriteLine("Skriv in två tal som du vill multiplicera.\n");
 
             Multiplicera multValue = new Multiplicera();
-            double produkt = multValue.getMultiplikation();
+            double produkt = multValue.GetMultiplikation();
             Console.WriteLine($"Produkten är {produkt} \n");
 
             PausForKey();
@@ -62,7 +62,7 @@ while (appRullar)
             Console.WriteLine("Skriv in två tal som du vill dividera.\n");
 
             Dividera divValue = new Dividera();
-            double kvot = divValue.getDivision();
+            double kvot = divValue.GetDivision();
             Console.WriteLine($"Kvoten är {kvot} \n");
 
             PausForKey();
