@@ -16,9 +16,7 @@ while (appRullar)
 
     ConsoleKeyInfo menyVal = Console.ReadKey();
 
-    char menyValChar = menyVal.KeyChar;
-
-    switch (menyValChar)
+    switch (menyVal.KeyChar)
     {
         case '1':
             Console.Clear();
