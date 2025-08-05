@@ -27,10 +27,9 @@ while (appRullar)
 
             Addera addValue = new Addera();
             double summa = addValue.getAddition();
-            Console.WriteLine($"Summan är {summa}");
+            Console.WriteLine($"Summan är {summa} \n");
 
-            Console.WriteLine("Tryck på valfri tangent för att fortsätta...");
-            Console.ReadKey();
+            PausForKey();
             break;
             
         case '2':
@@ -40,10 +39,9 @@ while (appRullar)
 
             Substrahera subValue = new Substrahera();
             double differens = subValue.getSubstraktion();
-            Console.WriteLine($"Differensen är {differens}");
+            Console.WriteLine($"Differensen är {differens} \n");
 
-            Console.WriteLine("Tryck på valfri tangent för att fortsätta...");
-            Console.ReadKey();
+            PausForKey();
             break;
 
         case '3':
@@ -53,10 +51,9 @@ while (appRullar)
 
             Multiplicera multValue = new Multiplicera();
             double produkt = multValue.getMultiplikation();
-            Console.WriteLine($"Produkten är {produkt}");
+            Console.WriteLine($"Produkten är {produkt} \n");
 
-            Console.WriteLine("Tryck på valfri tangent för att fortsätta...");
-            Console.ReadKey();
+            PausForKey();
             break;
 
         case '4':
@@ -66,10 +63,9 @@ while (appRullar)
 
             Dividera divValue = new Dividera();
             double kvot = divValue.getDivision();
-            Console.WriteLine($"Kvoten är {kvot}");
+            Console.WriteLine($"Kvoten är {kvot} \n");
 
-            Console.WriteLine("Tryck på valfri tangent för att fortsätta...");
-            Console.ReadKey();
+            PausForKey();
             break;
 
         case '5':
@@ -80,10 +76,16 @@ while (appRullar)
 
         default:
             Console.WriteLine("\nOgiltigt val, försök igen.");
-            Console.WriteLine("Tryck på valfri tangent för att fortsätta...");
-            Console.ReadKey();
+            
+            PausForKey();
             break;
 
+    }
+
+    static void PausForKey()
+    {
+        Console.WriteLine("Tryck på valfri tangent för att fortsätta...");
+        Console.ReadKey();
     }
 
 }
