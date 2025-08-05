@@ -1,7 +1,6 @@
-﻿// See https://aka.ms/new-console-template for more information
+﻿using ConsoleCalulator;
 
 bool appRullar = true;
-
 
 while (appRullar)
 {
@@ -38,7 +37,8 @@ while (appRullar)
             Console.WriteLine("\n\nDu valde Subtraktion.");
             Console.WriteLine("Skriv in två tal som du vill subtrahera.\n");
 
-            double differens = getSubstraktion();
+            Substrahera subValue = new Substrahera();
+            double differens = subValue.getSubstraktion();
             Console.WriteLine($"Differensen är {differens}");
 
             Console.WriteLine("Tryck på valfri tangent för att fortsätta...");
@@ -98,30 +98,7 @@ while (appRullar)
         return (calcSumma);
     }
 
-    double getSubstraktion()
-    {
-        double tal1 = 0, tal2 = 0;
-
-        Console.WriteLine("Skriv in tal 1 + <RETURN>:");
-        // Mata in och validera det första numret
-        while (!double.TryParse(Console.ReadLine(), out tal1))
-        {
-            Console.WriteLine("Tänka på att använda komma-tecken för decimaler, försök igen:");
-        }
-
-        Console.WriteLine("Skriv in tal 2 + <RETURN>:");
-        // Mata in och validera det andra numret
-        while (!double.TryParse(Console.ReadLine(), out tal2))
-        {
-            Console.WriteLine("Tänka på att använda komma-tecken för decimaler, försök igen:");
-        }
-
-        // Summera, avrunda och returnera summan
-        double calcSumma = (tal1 - tal2);
-        calcSumma = Math.Round(calcSumma, 2);
-
-        return (calcSumma);
-    }
+    
 
 
 }
