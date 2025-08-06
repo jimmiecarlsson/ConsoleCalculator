@@ -1,11 +1,11 @@
 ﻿using System;
 
-namespace ConsoleCalulator
+namespace ConsoleCalulator.Actions
 {
-    public class Addera
+    public class Dividera
     {
 
-        public double GetAddition()
+        public double GetDivision()
         {
             double tal1 = 0, tal2 = 0;
 
@@ -24,12 +24,18 @@ namespace ConsoleCalulator
             }
 
             // Summera, avrunda och returnera summan
-            double calcSumma = (tal1 + tal2);
-            calcSumma = Math.Round(calcSumma, 2);
 
-            return (calcSumma);
+            while (tal1 == 0 || tal2 == 0 )
+            {
+                Console.WriteLine("Division med noll är inte tillåten. Försök igen.");
+                return 0;
+            }
+
+            double calcKvot = tal1 / tal2;
+            calcKvot = Math.Round(calcKvot, 2);
+
+            return calcKvot;
         }
-
 
     }
 }

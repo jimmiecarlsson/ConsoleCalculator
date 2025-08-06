@@ -1,11 +1,11 @@
 ﻿using System;
 
-namespace ConsoleCalulator
+namespace ConsoleCalulator.Actions
 {
-    public class Multiplicera
+    public class Addera
     {
 
-        public double GetMultiplikation()
+        public double GetAddition()
         {
             double tal1 = 0, tal2 = 0;
 
@@ -24,11 +24,12 @@ namespace ConsoleCalulator
             }
 
             // Summera, avrunda och returnera summan
-            double calcProduct = (tal1 * tal2);
-            calcProduct = Math.Round(calcProduct, 2);
+            double calcSumma = tal1 + tal2;
+            calcSumma = Math.Round(calcSumma, 2);
 
-            return (calcProduct);
+            return calcSumma;
         }
+
 
     }
 }

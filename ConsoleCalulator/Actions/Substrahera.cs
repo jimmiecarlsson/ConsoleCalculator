@@ -1,7 +1,6 @@
-﻿
-using System;
+﻿using System;
 
-namespace ConsoleCalulator
+namespace ConsoleCalulator.Actions
 {
     public class Substrahera
     {
@@ -24,10 +23,10 @@ namespace ConsoleCalulator
             }
 
             // Summera, avrunda och returnera summan
-            double calcSumma = (tal1 - tal2);
+            double calcSumma = tal1 - tal2;
             calcSumma = Math.Round(calcSumma, 2);
 
-            return (calcSumma);
+            return calcSumma;
         }
 
     }
