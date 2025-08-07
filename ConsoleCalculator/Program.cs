@@ -25,7 +25,7 @@ while (appRullar)
 
             Addera addValue = new Addera();
             double summa = addValue.GetAddition();
-            Console.WriteLine($"Summan är {summa} \n");
+            Console.WriteLine($"Summan är {summa}");
 
             PausForKey();
             break;
@@ -37,7 +37,7 @@ while (appRullar)
 
             Substrahera subValue = new Substrahera();
             double differens = subValue.GetSubstraktion();
-            Console.WriteLine($"Differensen är {differens} \n");
+            Console.WriteLine($"Differensen är {differens}");
 
             PausForKey();
             break;
@@ -49,7 +49,7 @@ while (appRullar)
 
             Multiplicera multValue = new Multiplicera();
             double produkt = multValue.GetMultiplikation();
-            Console.WriteLine($"Produkten är {produkt} \n");
+            Console.WriteLine($"Produkten är {produkt}");
 
             PausForKey();
             break;
@@ -61,7 +61,7 @@ while (appRullar)
 
             Dividera divValue = new Dividera();
             double kvot = divValue.GetDivision();
-            Console.WriteLine($"Kvoten är {kvot} \n");
+            Console.WriteLine($"Kvoten är {kvot}");
 
             PausForKey();
             break;
@@ -82,7 +82,7 @@ while (appRullar)
 
     static void PausForKey()
     {
-        Console.WriteLine("Tryck på valfri tangent för att fortsätta...");
+        Console.WriteLine("\nTryck på valfri tangent för att fortsätta...");
         Console.ReadKey();
     }
 
