@@ -75,8 +75,11 @@ namespace xUnitTest
         
 
             //Assert
-            //Kastas rätt undantag?
-            Assert.Throws<DivideByZeroException>(act);
+            //Kastas rätt undantag? Kastas rätt type
+            DivideByZeroException ex = Assert.Throws<DivideByZeroException>(act);
+
+            //Är meddelandet exakt?
+            Assert.Equal("Division med noll är inte tillåten.", ex.Message);
         }
 
     }

@@ -6,7 +6,7 @@ namespace ConsoleCalulator.Actions
     {
         public double Divi(double a, double b)
         {
-            if (b == 0) throw new DivideByZeroException();
+            if (b == 0) throw new DivideByZeroException("Division med noll är inte tillåten.");
 
             return Math.Round(a / b, 2);
         }
