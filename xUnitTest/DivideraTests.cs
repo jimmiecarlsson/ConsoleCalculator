@@ -23,7 +23,7 @@ namespace xUnitTest
         }
 
         [Fact]
-        public void Dividera_TäljarenNoll_ReturnerarNoll()
+        public void Dividera_TaljarenNoll_ReturnerarNoll()
         {
             // Arrange
             Dividera dividera = new Dividera();
@@ -40,7 +40,44 @@ namespace xUnitTest
 
         }
 
+        [Fact]
+        public void Dividera_NegativTaljare_ReturneraKvot()
+        {
+            //Arrange
+            Dividera dividera = new Dividera();
 
+            double a = -7;
+            double b = 3;
+
+            //Act
+            double result = dividera.Divi(a, b);
+
+            //Assert
+            Assert.Equal(-2.33, result, precision: 2);
+
+        }
+
+        [Fact]
+        public void Dividera_NamnareNoll_ReturneraUndantag()
+        {
+            //Arrange
+
+            Dividera dividera = new Dividera();
+
+            double a = 5;
+            double b = 0;
+
+            //Act
+            //double result = dividera.Divi(a, b);
+            //behöver en delegate som körs senare
+
+            Action act = () => dividera.Divi(a,b);
+        
+
+            //Assert
+            //Kastas rätt undantag?
+            Assert.Throws<DivideByZeroException>(act);
+        }
 
     }
 }

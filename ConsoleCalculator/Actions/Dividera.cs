@@ -6,6 +6,8 @@ namespace ConsoleCalulator.Actions
     {
         public double Divi(double a, double b)
         {
+            if (b == 0) throw new DivideByZeroException();
+
             return Math.Round(a / b, 2);
         }
 
